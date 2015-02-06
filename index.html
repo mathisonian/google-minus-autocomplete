@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Google</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/google.css">
+  </head>
+  <body>
+    <header role="header">
+      <nav role="nav">
+        <a href="#">+You</a>
+        <a href="#">Gmail</a>
+        <a href="#">Images</a>
+        <a href="#" class="apps"></a>
+        <a href="#" class="sign-in">Sign in</a>
+      </nav>
+    </header>
+    <main role="main">
+      <div class="logo">
+        <span class="country">Minus Autocomplete</span>
+      </div>
+      <form role="search">
+        <div class="control">
+          <span class="voice"></span>
+          <span class="caret"></span>
+          <span class="description">Search by voice</span>
+        </div>
+        <input type="text" id="search-input" />
+        <div class="buttons">
+          <button class="search" autocomplete="off">Google Search</button>
+          <button class="lucky" autocomplete="off">I'm Feeling Lucky</button>
+        </div>
+      </form>
+      <!-- <div class="languages">
+        Extrea text at the bottom
+      </div> -->
+    </main>
+    <footer role="footer">
+      <div class="left">
+        <a href="#">Advertising</a>
+        <a href="#">Business</a>
+        <a href="#">About</a>
+      </div>
+      <div class="right">
+        <a href="#">Privacy &amp; Terms</a>
+        <a href="#">Settings</a>
+        <a href="#">Use Google.com</a>
+      </div>
+    </footer>
+
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+    <script>
+      $(function () {
+        $('button.search, button.lucky').click(function(e) {
+          e.preventDefault();
+          window.location.href = 'https://www.google.com/#q=' + encodeURIComponent($('#search-input').val());
+          return false;
+        });
+      })
+    </script>
+
+  </body>
+</html>
