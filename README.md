@@ -1,2 +1,2 @@
-# google-minus-autocomplete
+# http://googleminusautocomplete.com
 Search without suggestion
